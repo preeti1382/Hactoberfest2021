@@ -1,0 +1,26 @@
+arr = []
+n = int(input("enter length of array:"))
+for i in range(0,n):
+    x = int(input("enter elements of array:"))
+    arr.append(x)
+
+def bubbleSort(arr):
+    for i in range(n-1):
+        for j in range(n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j] , arr[j+1] = arr[j+1] , arr[j]
+
+
+#original array as per the inputs given by user
+print("Original Array:")
+for i in range(n):
+    print(arr[i])
+    
+#calling bubbleSort function    
+bubbleSort(arr)
+
+#sorted array after calling bubbleSort function
+print("Sorted array:")
+for i in range(n):
+    print(arr[i])
+
